@@ -1,114 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Trashino — Privacy Policy</title>
+<meta name="description" content="Informativa sulla privacy di Trashino — promemoria della raccolta differenziata. Nessun account, offline-first.">
+<!-- Pagina costruita con i DESIGN TOKEN del marchio Trashino (repo trashino-brand,
+     dist/css → qui vendorato come brand.tokens.css). Un colore cambia nell'hub e
+     questa pagina si riallinea: stessa identità di app, social e video. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brand.tokens.css">
 <style>
-  body{font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:#f4faf5;color:#1f2a22;line-height:1.65;}
-  .wrap{max-width:760px;margin:0 auto;background:#ffffff;}
-  .hero{background:linear-gradient(135deg,#1b5e20 0%,#2e7d32 55%,#26a69a 100%);color:#fff;padding:40px 32px 34px;}
-  .hero .leaf{font-size:34px;line-height:1;}
-  .hero h1{font-size:30px;margin:10px 0 4px;color:#fff;}
-  .hero .sub{color:#d7f0dc;font-size:15px;margin:0;}
-  .content{padding:8px 32px 44px;}
-  h1{font-size:28px;margin:0 0 4px;color:#1b5e20;}
-  h2{font-size:19px;margin:28px 0 6px;color:#2e7d32;border-left:4px solid #66bb6a;padding-left:10px;}
-  .date{color:#5a6b5e;font-size:14px;margin:4px 0 20px;}
-  hr{border:none;border-top:2px solid #e2efe4;margin:48px 0;}
-  a{color:#2e7d32;}
-  .content h1{margin-top:8px;}
+  *{box-sizing:border-box;}
+  body{
+    font-family: var(--tr-fontFamily-body, system-ui, sans-serif);
+    margin:0; background: var(--tr-color-surface-app); color: var(--tr-color-ink-body);
+    line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:780px;margin:0 auto;background:var(--tr-color-surface-card);
+    box-shadow: var(--tr-shadow-card); min-height:100vh;}
+
+  /* Hero — gradiente firma "Profondità" del marchio */
+  .hero{background: var(--tr-gradient-depth); color:#fff;
+    padding:44px 32px 40px; position:relative; overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-40px;bottom:-50px;width:180px;height:180px;
+    border-radius:50%;background:rgba(105,240,174,.18);} /* mint glow */
+  .wm{font-family: var(--tr-fontFamily-display); font-weight:600; font-size:40px;
+    letter-spacing:-1px; display:inline-flex; align-items:baseline; gap:1px;}
+  .wm .ino{font-family: var(--tr-fontFamily-script); font-weight:700; font-size:46px; letter-spacing:0;}
+  .wm .leaf{width:16px;height:16px;margin-left:2px;transform:translateY(-14px) rotate(8deg);}
+  .hero h1{font-family:var(--tr-fontFamily-display);font-weight:600;font-size:24px;margin:14px 0 4px;color:#fff;}
+  .hero .sub{color:#d7f0dc;font-size:15px;margin:0;max-width:46ch;}
+
+  /* Toggle lingua */
+  .langbar{display:flex;gap:8px;padding:14px 32px 0;}
+  .langbar button{font:inherit;font-weight:600;cursor:pointer;border:1.5px solid var(--tr-color-surface-border);
+    background:transparent;color:var(--tr-color-ink-muted);border-radius:var(--tr-radius-pill);padding:6px 16px;}
+  .langbar button[aria-pressed="true"]{background:var(--tr-color-forest-700);color:#fff;border-color:var(--tr-color-forest-700);}
+
+  .content{padding:8px 32px 48px;}
+  .date{color:var(--tr-color-ink-muted);font-size:14px;margin:14px 0 22px;}
+  h2{font-family:var(--tr-fontFamily-display);font-weight:600;font-size:19px;
+    margin:30px 0 6px;color:var(--tr-color-forest-700);
+    border-left:4px solid var(--tr-color-forest-500);padding-left:12px;}
+  a{color:var(--tr-color-forest-700);}
+  strong{color:var(--tr-color-ink-heading);}
+
+  /* Sezione Premium — oro, come da regola di marca (oro SOLO Premium) */
+  .premium{margin:26px 0;padding:18px 18px 18px 20px;border-radius:var(--tr-radius-xl);
+    background:linear-gradient(135deg,#fffdf5, #fff8e6);
+    border:1px solid var(--tr-color-gold-300);border-left:5px solid var(--tr-color-gold-500);}
+  .premium h2{border:0;padding:0;margin:0 0 6px;color:var(--tr-color-gold-ink);}
+  .chip{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;
+    background:var(--tr-gradient-premium);color:var(--tr-color-gold-ink);
+    padding:3px 10px;border-radius:var(--tr-radius-pill);margin-bottom:8px;}
+
+  footer{background:var(--tr-color-forest-800);color:#cdeede;padding:26px 32px;font-size:14px;}
+  footer .wm{font-size:24px;color:#fff;}
+  footer .wm .ino{font-size:28px;}
+  footer a{color:#9be7c0;}
+  .muted{color:var(--tr-color-ink-muted);font-size:13px;}
+  [hidden]{display:none !important;}
+  @media(max-width:520px){.hero,.content,.langbar,footer{padding-left:20px;padding-right:20px;}}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<div class="hero">
-  <div class="leaf">🌱</div>
-  <h1>Trashino — Privacy Policy</h1>
-  <p class="sub">Un'app che rispetta l'ambiente. E la tua privacy.</p>
+  <div class="hero">
+    <div class="wm">Trash<span class="ino">ıno</span><svg class="leaf" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 4C10 4 4 10 4 20c10 0 16-6 16-16Z" fill="#69F0AE"/><path d="M7 17C10 12 14 9 18 7" stroke="#14401A" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+    <h1 data-it="Informativa sulla privacy" data-en="Privacy Policy">Informativa sulla privacy</h1>
+    <p class="sub" data-it="Un'app che rispetta l'ambiente. E la tua privacy." data-en="An app that respects the planet. And your privacy.">Un'app che rispetta l'ambiente. E la tua privacy.</p>
+  </div>
+
+  <div class="langbar" role="group" aria-label="Lingua / Language">
+    <button id="btn-it" aria-pressed="true" onclick="setLang('it')">Italiano</button>
+    <button id="btn-en" aria-pressed="false" onclick="setLang('en')">English</button>
+  </div>
+
+  <!-- ===================== ITALIANO ===================== -->
+  <div class="content lang-it">
+    <p class="date">Ultimo aggiornamento: 27 giugno 2026</p>
+
+    <p>Trashino ("l'app") è un promemoria giornaliero per la raccolta differenziata,
+    sviluppato da <strong>Airally Digital</strong> ("noi"). Questa pagina spiega in
+    modo semplice quali dati l'app tratta e perché. Trashino è pensata nel rispetto
+    della privacy: <strong>nessun account</strong>, nessun login, e non raccogliamo
+    il tuo nome, la tua email o i tuoi contatti. <strong>Non mostra pubblicità.</strong></p>
+
+    <h2>Dati salvati sul tuo dispositivo</h2>
+    <p>Le tue impostazioni — categorie di rifiuti, calendario di raccolta, orario del
+    promemoria, luoghi e lingua — sono salvate <strong>solo sul tuo dispositivo</strong>.
+    Non abbiamo un server e questi dati non vengono mai inviati a noi. Disinstallando
+    l'app, vengono eliminati.</p>
+
+    <h2>Notifiche</h2>
+    <p>L'app usa notifiche locali per ricordarti cosa buttare. Sono generate sul tuo
+    dispositivo, non arrivano da alcun server e non contengono dati personali.</p>
+
+    <h2>Statistiche (Firebase Analytics)</h2>
+    <p>Usiamo Google Firebase Analytics per capire, in forma aggregata, come viene
+    usata l'app (ad es. quante persone completano la configurazione iniziale). Sono
+    dati statistici e non servono a identificarti. Firebase può trattare un
+    identificativo casuale dell'installazione e informazioni generali sul dispositivo.
+    Informativa di Google: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
+
+    <h2>Segnalazioni di errore (Firebase Crashlytics)</h2>
+    <p>Se l'app va in crash, Google Firebase Crashlytics ci invia un report tecnico
+    (tipo di errore, modello del dispositivo) per correggere i bug. Questi report non
+    contengono informazioni personali.</p>
+
+    <div class="premium">
+      <span class="chip">Premium</span>
+      <h2>Acquisti in-app (Google Play Billing)</h2>
+      <p>Trashino è gratuita; offre un abbonamento <strong>Premium</strong> facoltativo.
+      Gli acquisti sono gestiti interamente da <strong>Google Play</strong>: non vediamo
+      né conserviamo i dati di pagamento (carta, indirizzo). L'app salva solo
+      <strong>localmente</strong> un'indicazione che il Premium è attivo, per sbloccare
+      le funzioni. Informativa di Google: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
+    </div>
+
+    <h2>Condivisione dei dati</h2>
+    <p>Non vendiamo i tuoi dati. L'unico soggetto terzo coinvolto è <strong>Google</strong>,
+    come fornitore di servizi per Analytics, Crashlytics e Google Play Billing, secondo
+    i propri termini.</p>
+
+    <h2>Conservazione</h2>
+    <p>Le impostazioni restano sul tuo dispositivo finché non le elimini o disinstalli
+    l'app. I dati statistici e di crash sono conservati da Google secondo i suoi periodi
+    standard.</p>
+
+    <h2>I tuoi diritti</h2>
+    <p>Se ti trovi nel SEE/Regno Unito, hai diritto di accedere, correggere o cancellare
+    i tuoi dati e di opporti a determinati trattamenti. Poiché l'app non conserva dati
+    personali su un server, puoi rimuovere tutti i dati locali in qualsiasi momento
+    disinstallando l'app. Per qualsiasi richiesta, scrivici all'indirizzo qui sotto.</p>
+
+    <h2>Minori</h2>
+    <p>Trashino è un'utilità per il pubblico generale e non è rivolta ai minori.</p>
+
+    <h2>Modifiche</h2>
+    <p>Potremmo aggiornare questa informativa. La data di "ultimo aggiornamento" in alto
+    rifletterà ogni modifica.</p>
+
+    <h2>Contatti</h2>
+    <p>Airally Digital — <a href="mailto:airally.digital@gmail.com">airally.digital@gmail.com</a></p>
+  </div>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <div class="content lang-en" hidden>
+    <p class="date">Last updated: 27 June 2026</p>
+
+    <p>Trashino ("the app") is a daily waste-collection reminder developed by
+    <strong>Airally Digital</strong> ("we", "us"). This page explains, in plain terms,
+    what data the app handles and why. Trashino is privacy-friendly: <strong>no account</strong>,
+    no login, and we do not collect your name, email or contacts.
+    <strong>It shows no ads.</strong></p>
+
+    <h2>Data stored on your device</h2>
+    <p>Your settings — waste categories, collection calendar, reminder time, places and
+    language — are saved <strong>only on your device</strong>. We have no server and this
+    data is never uploaded to us. Uninstalling the app deletes it.</p>
+
+    <h2>Notifications</h2>
+    <p>The app uses local notifications to remind you what to put out. They are generated
+    on your device, are not sent from any server and contain no personal data.</p>
+
+    <h2>Analytics (Firebase Analytics)</h2>
+    <p>We use Google Firebase Analytics to understand, in aggregate, how the app is used
+    (e.g. how many people complete the initial setup). This is statistical and is not used
+    to identify you. Firebase may process a random app-instance identifier and general
+    device information. Google's policy:
+    <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
+
+    <h2>Crash reports (Firebase Crashlytics)</h2>
+    <p>If the app crashes, Google Firebase Crashlytics sends us a technical report (error
+    type, device model) so we can fix bugs. These reports contain no personal information.</p>
+
+    <div class="premium">
+      <span class="chip">Premium</span>
+      <h2>In-app purchases (Google Play Billing)</h2>
+      <p>Trashino is free, with an optional <strong>Premium</strong> subscription. Purchases
+      are handled entirely by <strong>Google Play</strong>: we never see or store your
+      payment details (card, address). The app only keeps a <strong>local</strong> flag
+      that Premium is active, to unlock features. Google's policy:
+      <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
+    </div>
+
+    <h2>How data is shared</h2>
+    <p>We do not sell your data. The only third party involved is <strong>Google</strong>,
+    as our service provider for Analytics, Crashlytics and Google Play Billing, under its
+    own terms.</p>
+
+    <h2>Data retention</h2>
+    <p>Settings remain on your device until you delete them or uninstall the app. Analytics
+    and crash data are retained by Google according to its standard periods.</p>
+
+    <h2>Your rights</h2>
+    <p>If you are in the EEA/UK, you have the right to access, correct or delete your data
+    and to object to certain processing. Since the app holds no personal data on a server,
+    you can remove all locally stored data at any time by uninstalling the app. For any
+    request, contact us at the address below.</p>
+
+    <h2>Children</h2>
+    <p>Trashino is a general-audience utility and is not directed at children.</p>
+
+    <h2>Changes</h2>
+    <p>We may update this policy. The "last updated" date above will reflect any change.</p>
+
+    <h2>Contact</h2>
+    <p>Airally Digital — <a href="mailto:airally.digital@gmail.com">airally.digital@gmail.com</a></p>
+  </div>
+
+  <footer>
+    <div class="wm">Trash<span class="ino">ıno</span></div>
+    <p class="muted" style="color:#9fcbb0;margin:8px 0 0;">© 2026 Airally Digital — <span data-it="un piccolo gesto al giorno, per un mondo più pulito." data-en="one small act a day, for a cleaner world.">un piccolo gesto al giorno, per un mondo più pulito.</span></p>
+  </footer>
+
 </div>
 
-<div class="content">
-
-<p class="date">Last updated: 15 June 2026</p>
-
-<p>Trashino ("the app") is a daily waste-collection reminder app developed by <strong>Airally Digital</strong> ("we", "us"). This page explains, in simple terms, what data the app handles and why. We designed Trashino to be privacy-friendly: it has no user account, no login, and we do not collect your name, email, or contacts.</p>
-
-<h2>Information stored on your device</h2>
-<p>Your settings — the waste categories, the weekly schedule, the reminder time and the chosen language — are saved <strong>only on your device</strong>. We do not have a server and this data is never uploaded to us. Uninstalling the app deletes it.</p>
-
-<h2>Notifications</h2>
-<p>The app uses local notifications to remind you what to throw out. These reminders are generated on your device; they are not sent from any server and contain no personal data.</p>
-
-<h2>Analytics (Firebase Analytics)</h2>
-<p>We use Google Firebase Analytics to understand, in aggregate, how the app is used (for example how many people complete the initial setup or change the reminder time). This data is statistical and is not used to identify you personally. Firebase may process a random app-instance identifier and general device/usage information. See Google's policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
-
-<h2>Crash reports (Firebase Crashlytics)</h2>
-<p>If the app crashes, Google Firebase Crashlytics sends us a technical diagnostic report (such as the type of error and device model) so we can fix bugs. These reports do not contain personal information.</p>
-
-<h2>Advertising (Google AdMob)</h2>
-<p>Trashino is free and shows a small banner ad through Google AdMob. We have chosen to serve <strong>non-personalized ads only</strong>: ads are not based on a profile of you. To deliver ads, prevent fraud and limit how often the same ad is shown, AdMob may still process limited technical data such as your device's IP address and identifiers. For users in the European Economic Area, the UK and Switzerland, the app shows a consent message before ads are displayed. See Google's policy: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
-
-<h2>How data is shared</h2>
-<p>We do not sell your data. The only third party involved is <strong>Google</strong>, which acts as our service provider for Analytics, Crashlytics and AdMob, under its own terms.</p>
-
-<h2>Data retention</h2>
-<p>Settings remain on your device until you delete them or uninstall the app. Analytics and crash data are retained by Google according to its standard retention periods.</p>
-
-<h2>Your rights</h2>
-<p>If you are in the EEA/UK, you have the right to access, correct or delete your data and to object to certain processing. Since the app does not hold personal data on a server, you can remove all locally stored data at any time by uninstalling the app. For any request, contact us at the address below.</p>
-
-<h2>Children</h2>
-<p>Trashino is a general-audience utility and is not directed at children.</p>
-
-<h2>Changes to this policy</h2>
-<p>We may update this policy. The "last updated" date above will reflect any change.</p>
-
-<h2>Contact</h2>
-<p>Airally Digital — airally.digital@gmail.com</p>
-
-<hr>
-
-<h1>Informativa sulla privacy — Trashino</h1>
-<p class="date">Ultimo aggiornamento: 15 giugno 2026</p>
-
-<p>Trashino ("l'app") è un'app di promemoria giornaliero per la raccolta differenziata, sviluppata da <strong>Airally Digital</strong> ("noi"). Questa pagina spiega in modo semplice quali dati l'app tratta e perché. Abbiamo progettato Trashino nel rispetto della privacy: non ha account utente né login, e non raccogliamo il tuo nome, la tua email o i tuoi contatti.</p>
-
-<h2>Informazioni salvate sul tuo dispositivo</h2>
-<p>Le tue impostazioni — le categorie di rifiuti, la pianificazione settimanale, l'orario del promemoria e la lingua scelta — sono salvate <strong>solo sul tuo dispositivo</strong>. Non abbiamo un server e questi dati non vengono mai inviati a noi. Disinstallando l'app, vengono eliminati.</p>
-
-<h2>Notifiche</h2>
-<p>L'app usa notifiche locali per ricordarti cosa buttare. Questi promemoria sono generati sul tuo dispositivo, non vengono inviati da alcun server e non contengono dati personali.</p>
-
-<h2>Statistiche (Firebase Analytics)</h2>
-<p>Usiamo Google Firebase Analytics per capire, in forma aggregata, come viene usata l'app (ad esempio quante persone completano la configurazione iniziale o cambiano l'orario del promemoria). Sono dati statistici e non servono a identificarti personalmente. Firebase può trattare un identificativo casuale dell'installazione e informazioni generali sul dispositivo e sull'utilizzo. Informativa di Google: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
-
-<h2>Segnalazioni di errore (Firebase Crashlytics)</h2>
-<p>Se l'app va in crash, Google Firebase Crashlytics ci invia un report diagnostico tecnico (come il tipo di errore e il modello del dispositivo) per permetterci di correggere i bug. Questi report non contengono informazioni personali.</p>
-
-<h2>Pubblicità (Google AdMob)</h2>
-<p>Trashino è gratuita e mostra un piccolo banner pubblicitario tramite Google AdMob. Abbiamo scelto di mostrare <strong>solo annunci non personalizzati</strong>: la pubblicità non si basa su un profilo dell'utente. Per mostrare gli annunci, prevenire le frodi e limitare quante volte viene mostrato lo stesso annuncio, AdMob può comunque trattare dati tecnici limitati come l'indirizzo IP e gli identificativi del dispositivo. Per gli utenti nello Spazio Economico Europeo, nel Regno Unito e in Svizzera, l'app mostra un messaggio di consenso prima di visualizzare gli annunci. Informativa di Google: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
-
-<h2>Condivisione dei dati</h2>
-<p>Non vendiamo i tuoi dati. L'unico soggetto terzo coinvolto è <strong>Google</strong>, che agisce come nostro fornitore di servizi per Analytics, Crashlytics e AdMob, secondo i propri termini.</p>
-
-<h2>Conservazione dei dati</h2>
-<p>Le impostazioni restano sul tuo dispositivo finché non le elimini o disinstalli l'app. I dati di statistiche e di crash sono conservati da Google secondo i suoi periodi di conservazione standard.</p>
-
-<h2>I tuoi diritti</h2>
-<p>Se ti trovi nel SEE/Regno Unito, hai il diritto di accedere, correggere o cancellare i tuoi dati e di opporti a determinati trattamenti. Poiché l'app non conserva dati personali su un server, puoi rimuovere in qualsiasi momento tutti i dati salvati localmente disinstallando l'app. Per qualsiasi richiesta, scrivici all'indirizzo qui sotto.</p>
-
-<h2>Minori</h2>
-<p>Trashino è un'utilità per il pubblico generale e non è rivolta ai minori.</p>
-
-<h2>Modifiche a questa informativa</h2>
-<p>Potremmo aggiornare questa informativa. La data di "ultimo aggiornamento" in alto rifletterà eventuali modifiche.</p>
-
-<h2>Contatti</h2>
-<p>Airally Digital — airally.digital@gmail.com</p>
-
-</div>
-</div>
+<script>
+  function setLang(l){
+    document.documentElement.lang = l;
+    document.querySelector('.lang-it').hidden = (l !== 'it');
+    document.querySelector('.lang-en').hidden = (l !== 'en');
+    document.getElementById('btn-it').setAttribute('aria-pressed', l === 'it');
+    document.getElementById('btn-en').setAttribute('aria-pressed', l === 'en');
+    document.querySelectorAll('[data-it]').forEach(function(el){
+      el.textContent = l === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-it');
+    });
+  }
+  // Lingua iniziale dal browser (it default).
+  var nav = (navigator.language || 'it').slice(0,2);
+  setLang(nav === 'en' ? 'en' : 'it');
+</script>
+<noscript><style>.lang-en{display:block !important;} .lang-it{display:block !important;} .langbar{display:none;}</style></noscript>
 </body>
 </html>

@@ -1,0 +1,104 @@
+/* GENERATO da build/generate.dart — NON modificare a mano. */
+/* Trashino design tokens → CSS custom properties. Fonte: tokens/trashino.tokens.json */
+:root {
+  /* color */
+  --tr-color-forest-900: #14401A;
+  --tr-color-forest-800: #1B5E20;
+  --tr-color-forest-700: #2E7D32;
+  --tr-color-forest-600: #388E3C;
+  --tr-color-forest-500: #43A047;
+  --tr-color-forest-400: #4CAF50;
+  --tr-color-teal-500: #26A69A;
+  --tr-color-teal-600: #00897B;
+  --tr-color-mintGlow: #69F0AE;
+  --tr-color-gold-300: #FFE082;
+  --tr-color-gold-500: #FFC107;
+  --tr-color-gold-700: #FFB300;
+  --tr-color-gold-ink: #6D4C00;
+  --tr-color-surface-mint50: #EAF7EE;
+  --tr-color-surface-tint100: #F1F8E9;
+  --tr-color-surface-tint200: #E8F5E9;
+  --tr-color-surface-tintTeal: #E0F2F1;
+  --tr-color-surface-app: #F5F8F5;
+  --tr-color-surface-card: #FFFFFF;
+  --tr-color-surface-border: #E6ECE6;
+  --tr-color-ink-heading: #1B5E20;
+  --tr-color-ink-body: #37474F;
+  --tr-color-ink-muted: #5A6B5C;
+  --tr-color-ink-faint: #9AA39A;
+  --tr-color-ink-onColor: #FFFFFF;
+  --tr-color-blush: #F48FB1;
+  --tr-color-category-umido: #795548;
+  --tr-color-category-plastica: #FFB300;
+  --tr-color-category-carta: #1565C0;
+  --tr-color-category-vetro: #2E7D32;
+  --tr-color-category-indifferenziato: #546E7A;
+  --tr-color-category-metallo: #9E9E9E;
+  --tr-color-category-extra1: #D32F2F;
+  --tr-color-category-extra2: #7B1FA2;
+  --tr-color-category-extra3: #00897B;
+  --tr-color-category-extra4: #EF6C00;
+  --tr-color-category-extra5: #C2185B;
+  --tr-color-category-extra6: #303F9F;
+  --tr-color-semantic-success: #2E7D32;
+  --tr-color-semantic-warning: #FFB300;
+  --tr-color-semantic-error: #D32F2F;
+  --tr-color-semantic-info: #26A69A;
+  /* gradient */
+  --tr-gradient-depth: linear-gradient(135deg, #14401A 0%, #1B5E20 34%, #2E7D32 68%, #26A69A 100%);
+  --tr-gradient-premium: linear-gradient(135deg, #FFE082 0%, #FFC107 100%);
+  /* fontFamily */
+  --tr-fontFamily-display: Fredoka, Nunito, system-ui, sans-serif;
+  --tr-fontFamily-script: Caveat, "Comic Sans MS", cursive;
+  --tr-fontFamily-body: Inter, Roboto, system-ui, -apple-system, sans-serif;
+  /* fontWeight */
+  --tr-fontWeight-regular: 400;
+  --tr-fontWeight-medium: 500;
+  --tr-fontWeight-semibold: 600;
+  --tr-fontWeight-bold: 700;
+  --tr-fontWeight-black: 900;
+  /* fontSize */
+  --tr-fontSize-overline: 11px;
+  --tr-fontSize-caption: 12px;
+  --tr-fontSize-body: 14px;
+  --tr-fontSize-bodyLg: 16px;
+  --tr-fontSize-title: 19px;
+  --tr-fontSize-headline: 22px;
+  --tr-fontSize-display: 30px;
+  --tr-fontSize-displayLg: 44px;
+  /* lineHeight */
+  --tr-lineHeight-tight: 1.1;
+  --tr-lineHeight-snug: 1.3;
+  --tr-lineHeight-normal: 1.5;
+  /* letterSpacing */
+  --tr-letterSpacing-wordmark: -1px;
+  --tr-letterSpacing-tight: -0.5px;
+  --tr-letterSpacing-normal: 0px;
+  --tr-letterSpacing-overline: 0.8px;
+  /* radius */
+  --tr-radius-sm: 8px;
+  --tr-radius-md: 12px;
+  --tr-radius-lg: 14px;
+  --tr-radius-xl: 16px;
+  --tr-radius-2xl: 22px;
+  --tr-radius-pill: 999px;
+  /* space */
+  --tr-space-1: 4px;
+  --tr-space-2: 8px;
+  --tr-space-3: 12px;
+  --tr-space-4: 16px;
+  --tr-space-5: 20px;
+  --tr-space-6: 24px;
+  /* shadow */
+  --tr-shadow-card: 0px 2px 6px 0px #0000000D;
+  --tr-shadow-brand: 0px 8px 24px 0px #2E7D3255;
+  --tr-shadow-premium: 0px 2px 8px 0px #FFB30080;
+  /* motion */
+  --tr-motion-duration-tap: 120ms;
+  --tr-motion-duration-beat: 640ms;
+  --tr-motion-duration-entrance: 450ms;
+  --tr-motion-duration-breathe: 2600ms;
+  --tr-motion-easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --tr-motion-easing-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --tr-motion-easing-elastic: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
