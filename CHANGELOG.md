@@ -9,7 +9,7 @@ Ogni versione pubblicata è archiviata in `versions/<data>.html` (URL permanente
   pagamenti gestiti da Google Play; nessun dato di pagamento trattato dall'app (solo
   un flag locale di stato Premium).
 - Aggiornati i dati trattati (luoghi multipli, niente ads); contatto Airally Digital.
-- **Lingue: IT · EN · FR · ES** (prima solo IT · EN).
+- **Lingue: IT · EN · FR · DE · ES** (tedesco aggiunto il 28/06/2026 per il mercato host DACH; stessa informativa, solo tradotta; prima IT · EN).
 - Pagina **ricostruita on-brand**: consuma i design token del marchio
   (`brand.tokens.css` dall'hub `trashino-brand`, variabili `var(--tr-*)`).
 - Snapshot: [`versions/2026-06-27.html`](versions/2026-06-27.html).
