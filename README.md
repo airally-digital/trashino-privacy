@@ -17,5 +17,6 @@ ricopiare il CSS dall'hub e la pagina si riallinea — stessa identità di app/s
 cp ../trashino-brand/dist/css/trashino.tokens.css brand.tokens.css
 ```
 
-Contenuto: IT + EN (toggle lingua), versione 1.1 — nessuna pubblicità, abbonamento
-Premium via Google Play Billing. © Airally Digital.
+Contenuto: **IT · EN · FR · DE · ES** (toggle lingua) — abbonamento Premium via Google
+Play Billing; dati Firebase (identità anonima, Analytics, Crashlytics) dichiarati in
+modo trasparente. © Airally Digital.

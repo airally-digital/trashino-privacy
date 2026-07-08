@@ -3,6 +3,15 @@
 Ogni versione pubblicata è archiviata in `versions/<data>.html` (URL permanente) ed
 è anche un tag git (`privacy-<data>`). La pagina corrente è sempre `index.html`.
 
+## 2026-07-08 — accuratezza dati (Firebase) + allineamento concetto
+- **Corretta** l'affermazione errata "Non abbiamo un server / questi dati non vengono
+  mai inviati a noi": l'app usa **Firebase** (Google). Aggiunta la sezione *Identità
+  anonima e dati su Firebase* (identificativo casuale dell'installazione, Paese
+  grossolano, lingua, versione; nessun nome/email/account).
+- **Rimossa** la frase "Non mostra pubblicità" (claim non mantenibile a lungo termine).
+- Riformulati *I tuoi diritti*, *Condivisione dei dati* e *Conservazione* di conseguenza.
+- Snapshot: [`versions/2026-07-08.html`](versions/2026-07-08.html).
+
 ## 2026-06-27 — allineata all'app 1.1
 - **Rimossa** la sezione *Pubblicità (Google AdMob)*: la 1.1 non mostra annunci.
 - **Aggiunta** *Acquisti in-app (Google Play Billing)*: abbonamento Premium opzionale;
