@@ -17,7 +17,11 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Trashino — Informativa sulla privacy">
+<meta name="twitter:description" content="Come Trashino tratta i tuoi dati: nessun account, offline, rispettosa della privacy.">
 <meta name="twitter:image" content="https://trashino.com/og-image.jpg">
+<link rel="canonical" href="https://trashino.com/privacy/">
+<meta name="theme-color" content="#1B5E20">
 <!-- Pagina costruita con i DESIGN TOKEN del marchio Trashino (repo trashino-brand,
      dist/css → qui vendorato come brand.tokens.css). Un colore cambia nell'hub e
      questa pagina si riallinea: stessa identità di app, social e video. -->
@@ -40,27 +44,23 @@
     padding:44px 32px 40px; position:relative; overflow:hidden;}
   .hero::after{content:"";position:absolute;right:-40px;bottom:-50px;width:180px;height:180px;
     border-radius:50%;background:rgba(105,240,174,.18);} /* mint glow */
-  .wm{font-family: var(--tr-fontFamily-display); font-weight:600; font-size:40px;
-    letter-spacing:-1px; display:inline-flex; align-items:baseline; gap:1px;}
-  .wm .ino{font-family: var(--tr-fontFamily-script); font-weight:700; font-size:46px; letter-spacing:0;}
-  .wm .leaf{width:16px;height:16px;margin-left:2px;transform:translateY(-14px) rotate(8deg);}
   .hero h1{font-family:var(--tr-fontFamily-display);font-weight:600;font-size:24px;margin:14px 0 4px;color:#fff;}
   .hero .sub{color:#d7f0dc;font-size:15px;margin:0;max-width:48ch;}
 
   /* ===== HEADER gemello (stessa barra della landing) ===== */
   .trnav{position:sticky;top:0;z-index:40;backdrop-filter:blur(10px);
-    background:rgba(245,248,245,.85);border-bottom:1px solid var(--tr-color-surface-border);}
-  .trnav .in{max-width:780px;margin:0 auto;display:flex;align-items:center;gap:12px;height:60px;padding:0 32px;}
-  .trnav .brand img{height:24px;display:block;}
+    background:rgba(245,251,244,.82);border-bottom:1px solid var(--tr-color-surface-border);}
+  .trnav .in{max-width:780px;margin:0 auto;display:flex;align-items:center;gap:12px;height:64px;padding:0 32px;}
+  .trnav .brand img{height:26px;display:block;}
   .trnav a.home{margin-left:auto;font-family:var(--tr-fontFamily-display);font-weight:500;font-size:15px;
     color:var(--tr-color-forest-800);text-decoration:none;opacity:.85;}
   .trnav a.home:hover{opacity:1;color:var(--tr-color-forest-700);}
   /* switcher a bandierine (identico alla landing) */
   .langsel{position:relative;display:flex;align-items:center;}
   .lang-trigger{display:none;align-items:center;gap:4px;background:#fff;border:1.5px solid var(--tr-color-surface-border);
-    border-radius:var(--tr-radius-pill);padding:5px 10px;font-size:17px;line-height:1;cursor:pointer;color:var(--tr-color-forest-800);}
+    border-radius:var(--tr-radius-pill);padding:8px 12px;font-size:17px;line-height:1;cursor:pointer;color:var(--tr-color-forest-800);}
   .lang-menu{display:flex;gap:2px;}
-  .lang-btn{background:none;border:none;cursor:pointer;font-size:20px;line-height:1;padding:6px 7px;border-radius:9px;
+  .lang-btn{background:none;border:none;cursor:pointer;font-size:20px;line-height:1;padding:9px 11px;border-radius:9px;
     opacity:.45;filter:grayscale(.5);transition:.15s;}
   .lang-btn:hover{opacity:1;filter:none;}
   .lang-btn.on{opacity:1;filter:none;background:rgba(27,94,32,.10);}
@@ -77,12 +77,13 @@
   .trfoot .in{max-width:780px;margin:0 auto;padding:0 32px;display:flex;gap:18px;align-items:center;flex-wrap:wrap;}
   .trfoot .wm-img{height:26px;max-width:none;}
   .trfoot .soc{margin-left:auto;display:flex;gap:10px;}
-  .trfoot .soc a{width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.08);display:flex;
+  .trfoot .soc a{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.08);display:flex;
     align-items:center;justify-content:center;color:#cfe6d4;font-family:var(--tr-fontFamily-display);font-weight:700;font-size:20px;text-decoration:none;}
   .trfoot .soc a:hover{background:rgba(255,255,255,.16);}
   .trfoot .fine{width:100%;border-top:1px solid rgba(255,255,255,.12);margin-top:20px;padding-top:16px;font-size:13px;color:#9fc0a8;}
   .trfoot .fine a{color:#bfe0c6;text-decoration:underline;}
   .trfoot .fine b{color:#e7f6ec;}
+  .lang-btn:focus-visible,.trnav a:focus-visible,.trfoot .soc a:focus-visible,.content a:focus-visible,.lang-trigger:focus-visible{outline:2.5px solid var(--tr-color-mintGlow);outline-offset:2px;border-radius:8px}
 
   .content{padding:8px 32px 40px;}
   .date{color:var(--tr-color-ink-muted);font-size:14px;margin:14px 0 22px;}
@@ -101,12 +102,6 @@
     background:var(--tr-gradient-premium);color:var(--tr-color-gold-ink);
     padding:3px 10px;border-radius:var(--tr-radius-pill);margin-bottom:8px;}
 
-  footer{background:var(--tr-color-forest-800);color:#cdeede;padding:26px 32px;font-size:14px;}
-  footer .wm{font-size:24px;color:#fff;}
-  footer .wm .ino{font-size:28px;}
-  footer a{color:#9be7c0;}
-  .ver{margin:14px 0 0;font-size:13px;color:#9fcbb0;}
-  .muted{color:#9fcbb0;font-size:13px;}
   .wm-img{display:block;height:auto;max-width:72vw}
   footer .wm-img{margin-bottom:2px}
   [hidden]{display:none !important;}
@@ -114,13 +109,13 @@
 </style>
 </head>
 <body>
-<nav class="trnav">
+<nav class="trnav" aria-label="Primary">
   <div class="in">
     <a class="brand" href="https://airally-digital.github.io/trashino-site/" aria-label="Trashino — home"><img src="trashino-wordmark.png" alt="Trashino"></a>
     <a class="home" href="https://airally-digital.github.io/trashino-site/" data-it="Home" data-en="Home" data-fr="Accueil" data-de="Start" data-es="Inicio">Home</a>
     <div class="langsel" id="langsel">
       <button class="lang-trigger" id="langTrigger" aria-haspopup="true" aria-expanded="false" aria-label="Language">🇬🇧 ▾</button>
-      <div class="lang-menu">
+      <div class="lang-menu" role="group" aria-label="Language">
         <button class="lang-btn" data-lang="en" aria-label="English">🇬🇧</button>
         <button class="lang-btn" data-lang="it" aria-label="Italiano">🇮🇹</button>
         <button class="lang-btn" data-lang="fr" aria-label="Français">🇫🇷</button>
@@ -177,7 +172,7 @@
   </div>
 
   <!-- ===================== ENGLISH ===================== -->
-  <div class="content lang-en">
+  <div class="content lang-en" hidden>
     <p class="date">Last updated: 8 July 2026</p>
     <p>Trashino ("the app") is a daily waste-collection reminder developed by <strong>Airally Digital</strong> ("we", "us"). This page explains, in plain terms, what data the app handles and why. Trashino is privacy-friendly: <strong>no account</strong>, no login, and we do not collect your name, email or contacts.</p>
     <h2>Data stored on your device</h2>
@@ -218,7 +213,7 @@
     <h2>Notifications</h2>
     <p>L'app utilise des notifications locales pour te rappeler quoi sortir. Elles sont générées sur ton appareil, ne proviennent d'aucun serveur et ne contiennent aucune donnée personnelle.</p>
     <h2>Identité anonyme et données sur Firebase</h2>
-    <p>Pour faire fonctionner certaines fonctions (ex. contenus et messages) et comprendre l'usage de l'app par région, l'app crée une identité <strong>anonyme</strong> (sans connexion) via Google Firebase et enregistre un profil minimal et <strong>non identifiant</strong> : un identifiant aléatoire de l'installation, ton pays (approximatif, issu des réglages de l'appareil, pas du GPS), la langue et la version de l'app. Il n'y a aucun nom, e-mail ni contact. Politique de Google : <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
+    <p>Pour faire fonctionner certaines fonctions (ex. contenus et messages) et comprendre l'usage de l'app par région, l'app crée une identité <strong>anonyme</strong> (sans connexion) via Google Firebase et conserve un enregistrement minimal et <strong>non identifiant</strong> : un identifiant aléatoire de l'installation, ton pays (approximatif, issu des réglages de l'appareil, pas du GPS), la langue et la version de l'app. Il n'y a aucun nom, e-mail ni contact. Politique de Google : <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
     <h2>Statistiques (Firebase Analytics)</h2>
     <p>Nous utilisons Google Firebase Analytics pour comprendre, de façon agrégée, comment l'app est utilisée (par ex. combien de personnes terminent la configuration initiale). Ce sont des données statistiques qui ne servent pas à t'identifier. Firebase peut traiter un identifiant aléatoire de l'installation et des informations générales sur l'appareil.</p>
     <h2>Rapports de plantage (Firebase Crashlytics)</h2>
@@ -231,7 +226,7 @@
     <h2>Partage des données</h2>
     <p>Nous ne vendons pas tes données. Le seul tiers impliqué est <strong>Google</strong>, en tant que prestataire pour Firebase (identité anonyme, Analytics, Crashlytics) et Google Play Billing, selon ses propres conditions.</p>
     <h2>Conservation</h2>
-    <p>Les réglages restent sur ton appareil jusqu'à ce que tu les supprimes ou désinstalles l'app. Le profil anonyme, les données statistiques et de plantage sont conservés par Google/Firebase selon ses durées standard.</p>
+    <p>Les réglages restent sur ton appareil jusqu'à ce que tu les supprimes ou désinstalles l'app. L'enregistrement anonyme, les données statistiques et de plantage sont conservés par Google/Firebase selon ses durées standard.</p>
     <h2>Tes droits</h2>
     <p>Si tu te trouves dans l'EEE/au Royaume-Uni, tu as le droit d'accéder à tes données, de les corriger ou de les supprimer, et de t'opposer à certains traitements. Tu peux supprimer toutes les données <strong>locales</strong> à tout moment en désinstallant l'app ; pour les données traitées via Firebase (identifiant anonyme, statistiques), écris-nous à l'adresse ci-dessous pour l'accès ou la suppression.</p>
     <h2>Enfants</h2>
