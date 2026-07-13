@@ -60,17 +60,17 @@
   .lang-trigger{display:none;align-items:center;gap:4px;background:#fff;border:1.5px solid var(--tr-color-surface-border);
     border-radius:var(--tr-radius-pill);padding:8px 12px;font-size:17px;line-height:1;cursor:pointer;color:var(--tr-color-forest-800);}
   .lang-menu{display:flex;gap:2px;}
-  .lang-btn{background:none;border:none;cursor:pointer;font-size:20px;line-height:1;padding:9px 11px;border-radius:9px;
-    opacity:.45;filter:grayscale(.5);transition:.15s;}
-  .lang-btn:hover{opacity:1;filter:none;}
-  .lang-btn.on{opacity:1;filter:none;background:rgba(27,94,32,.10);}
+  .lang-btn{background:none;border:none;cursor:pointer;font-family:var(--tr-fontFamily-display);font-weight:600;font-size:14px;letter-spacing:.02em;line-height:1;padding:8px 9px;border-radius:9px;
+    color:var(--tr-color-ink-muted);opacity:.9;transition:.15s;}
+  .lang-btn:hover{opacity:1;color:var(--tr-color-forest-700);}
+  .lang-btn.on{opacity:1;color:var(--tr-color-forest-800);background:rgba(27,94,32,.10);}
   @media(max-width:600px){
     .trnav a.home{display:none;}
     .lang-trigger{display:inline-flex;margin-left:auto;}
     .langsel .lang-menu{position:absolute;top:calc(100% + 8px);right:0;flex-direction:column;background:#fff;
       border:1px solid var(--tr-color-surface-border);border-radius:14px;box-shadow:0 12px 28px rgba(20,64,26,.16);padding:6px;display:none;z-index:60;}
     .langsel.open .lang-menu{display:flex;}
-    .lang-btn{font-size:22px;}
+    .lang-btn{font-size:15px;}
   }
   /* ===== FOOTER gemello ===== */
   .trfoot{background:var(--tr-color-forest-900);color:#cfe6d4;padding:40px 0;}
@@ -114,13 +114,13 @@
     <a class="brand" href="https://airally-digital.github.io/trashino-site/" aria-label="Trashino — home"><img src="trashino-wordmark.png" alt="Trashino"></a>
     <a class="home" href="https://airally-digital.github.io/trashino-site/" data-it="Home" data-en="Home" data-fr="Accueil" data-de="Start" data-es="Inicio">Home</a>
     <div class="langsel" id="langsel">
-      <button class="lang-trigger" id="langTrigger" aria-haspopup="true" aria-expanded="false" aria-label="Language">🇬🇧 ▾</button>
+      <button class="lang-trigger" id="langTrigger" aria-haspopup="true" aria-expanded="false" aria-label="Language">EN ▾</button>
       <div class="lang-menu" role="group" aria-label="Language">
-        <button class="lang-btn" data-lang="en" aria-label="English">🇬🇧</button>
-        <button class="lang-btn" data-lang="it" aria-label="Italiano">🇮🇹</button>
-        <button class="lang-btn" data-lang="fr" aria-label="Français">🇫🇷</button>
-        <button class="lang-btn" data-lang="de" aria-label="Deutsch">🇩🇪</button>
-        <button class="lang-btn" data-lang="es" aria-label="Español">🇪🇸</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+        <button class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
+        <button class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
+        <button class="lang-btn" data-lang="de" aria-label="Deutsch">DE</button>
+        <button class="lang-btn" data-lang="es" aria-label="Español">ES</button>
       </div>
     </div>
   </div>
@@ -331,7 +331,7 @@
 
 <script>
   var LANGS = ['en','it','fr','de','es'];
-  var FLAG  = {en:'🇬🇧',it:'🇮🇹',fr:'🇫🇷',de:'🇩🇪',es:'🇪🇸'};
+  var FLAG  = {en:'EN',it:'IT',fr:'FR',de:'DE',es:'ES'};
   var TITLE = {en:'Privacy Policy',it:'Informativa sulla privacy',fr:'Politique de confidentialité',de:'Datenschutzerklärung',es:'Política de privacidad'};
   var DESC  = {
     en:"Trashino's privacy policy — a waste-collection reminder. No account, offline-first.",
