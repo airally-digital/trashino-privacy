@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Trashino — Privacy Policy</title>
-<meta name="description" content="Informativa sulla privacy di Trashino — promemoria della raccolta differenziata. Nessun account, offline-first.">
+<meta name="description" id="metaDesc" content="Trashino's privacy policy — a waste-collection reminder. No account, offline-first.">
 <!-- Pagina costruita con i DESIGN TOKEN del marchio Trashino (repo trashino-brand,
      dist/css → qui vendorato come brand.tokens.css). Un colore cambia nell'hub e
      questa pagina si riallinea: stessa identità di app, social e video. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Caveat:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="brand.tokens.css">
 <style>
   *{box-sizing:border-box;}
   body{
-    font-family: var(--tr-fontFamily-body, system-ui, sans-serif);
+    font-family: 'Nunito', system-ui, sans-serif;
     margin:0; background: var(--tr-color-surface-app); color: var(--tr-color-ink-body);
     line-height:1.65; -webkit-font-smoothing:antialiased;
   }
   .wrap{max-width:780px;margin:0 auto;background:var(--tr-color-surface-card);
-    box-shadow: var(--tr-shadow-card); min-height:100vh;}
+    box-shadow: var(--tr-shadow-card);}
 
   /* Hero — gradiente firma "Profondità" del marchio */
   .hero{background: var(--tr-gradient-depth); color:#fff;
@@ -34,11 +34,42 @@
   .hero h1{font-family:var(--tr-fontFamily-display);font-weight:600;font-size:24px;margin:14px 0 4px;color:#fff;}
   .hero .sub{color:#d7f0dc;font-size:15px;margin:0;max-width:48ch;}
 
-  /* Toggle lingua */
-  .langbar{display:flex;gap:8px;padding:14px 32px 0;flex-wrap:wrap;}
-  .langbar button{font:inherit;font-weight:600;cursor:pointer;border:1.5px solid var(--tr-color-surface-border);
-    background:transparent;color:var(--tr-color-ink-muted);border-radius:var(--tr-radius-pill);padding:6px 16px;}
-  .langbar button[aria-pressed="true"]{background:var(--tr-color-forest-700);color:#fff;border-color:var(--tr-color-forest-700);}
+  /* ===== HEADER gemello (stessa barra della landing) ===== */
+  .trnav{position:sticky;top:0;z-index:40;backdrop-filter:blur(10px);
+    background:rgba(245,248,245,.85);border-bottom:1px solid var(--tr-color-surface-border);}
+  .trnav .in{max-width:780px;margin:0 auto;display:flex;align-items:center;gap:12px;height:60px;padding:0 32px;}
+  .trnav .brand img{height:24px;display:block;}
+  .trnav a.home{margin-left:auto;font-family:var(--tr-fontFamily-display);font-weight:500;font-size:15px;
+    color:var(--tr-color-forest-800);text-decoration:none;opacity:.85;}
+  .trnav a.home:hover{opacity:1;color:var(--tr-color-forest-700);}
+  /* switcher a bandierine (identico alla landing) */
+  .langsel{position:relative;display:flex;align-items:center;}
+  .lang-trigger{display:none;align-items:center;gap:4px;background:#fff;border:1.5px solid var(--tr-color-surface-border);
+    border-radius:var(--tr-radius-pill);padding:5px 10px;font-size:17px;line-height:1;cursor:pointer;color:var(--tr-color-forest-800);}
+  .lang-menu{display:flex;gap:2px;}
+  .lang-btn{background:none;border:none;cursor:pointer;font-size:20px;line-height:1;padding:6px 7px;border-radius:9px;
+    opacity:.45;filter:grayscale(.5);transition:.15s;}
+  .lang-btn:hover{opacity:1;filter:none;}
+  .lang-btn.on{opacity:1;filter:none;background:rgba(27,94,32,.10);}
+  @media(max-width:600px){
+    .trnav a.home{display:none;}
+    .lang-trigger{display:inline-flex;margin-left:auto;}
+    .langsel .lang-menu{position:absolute;top:calc(100% + 8px);right:0;flex-direction:column;background:#fff;
+      border:1px solid var(--tr-color-surface-border);border-radius:14px;box-shadow:0 12px 28px rgba(20,64,26,.16);padding:6px;display:none;z-index:60;}
+    .langsel.open .lang-menu{display:flex;}
+    .lang-btn{font-size:22px;}
+  }
+  /* ===== FOOTER gemello ===== */
+  .trfoot{background:var(--tr-color-forest-900);color:#cfe6d4;padding:40px 0;}
+  .trfoot .in{max-width:780px;margin:0 auto;padding:0 32px;display:flex;gap:18px;align-items:center;flex-wrap:wrap;}
+  .trfoot .wm-img{height:26px;max-width:none;}
+  .trfoot .soc{margin-left:auto;display:flex;gap:10px;}
+  .trfoot .soc a{width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.08);display:flex;
+    align-items:center;justify-content:center;color:#cfe6d4;font-family:var(--tr-fontFamily-display);font-weight:700;font-size:20px;text-decoration:none;}
+  .trfoot .soc a:hover{background:rgba(255,255,255,.16);}
+  .trfoot .fine{width:100%;border-top:1px solid rgba(255,255,255,.12);margin-top:20px;padding-top:16px;font-size:13px;color:#9fc0a8;}
+  .trfoot .fine a{color:#bfe0c6;text-decoration:underline;}
+  .trfoot .fine b{color:#e7f6ec;}
 
   .content{padding:8px 32px 40px;}
   .date{color:var(--tr-color-ink-muted);font-size:14px;margin:14px 0 22px;}
@@ -66,33 +97,41 @@
   .wm-img{display:block;height:auto;max-width:72vw}
   footer .wm-img{margin-bottom:2px}
   [hidden]{display:none !important;}
-  @media(max-width:520px){.hero,.content,.langbar,footer{padding-left:20px;padding-right:20px;}}
+  @media(max-width:520px){.hero,.content{padding-left:20px;padding-right:20px;} .trnav .in,.trfoot .in{padding-left:20px;padding-right:20px;}}
 </style>
 </head>
 <body>
+<nav class="trnav">
+  <div class="in">
+    <a class="brand" href="https://airally-digital.github.io/trashino-site/" aria-label="Trashino — home"><img src="trashino-wordmark.png" alt="Trashino"></a>
+    <a class="home" href="https://airally-digital.github.io/trashino-site/" data-it="Home" data-en="Home" data-fr="Accueil" data-de="Start" data-es="Inicio">Home</a>
+    <div class="langsel" id="langsel">
+      <button class="lang-trigger" id="langTrigger" aria-haspopup="true" aria-expanded="false" aria-label="Language">🇬🇧 ▾</button>
+      <div class="lang-menu">
+        <button class="lang-btn" data-lang="en" aria-label="English">🇬🇧</button>
+        <button class="lang-btn" data-lang="it" aria-label="Italiano">🇮🇹</button>
+        <button class="lang-btn" data-lang="fr" aria-label="Français">🇫🇷</button>
+        <button class="lang-btn" data-lang="de" aria-label="Deutsch">🇩🇪</button>
+        <button class="lang-btn" data-lang="es" aria-label="Español">🇪🇸</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
 <div class="wrap">
 
   <div class="hero">
-    <img class="wm-img" src="wordmark-on-dark.png" alt="Trashino" width="220" height="54">
-    <h1 data-it="Informativa sulla privacy" data-en="Privacy Policy" data-fr="Politique de confidentialité" data-de="Datenschutzerklärung" data-es="Política de privacidad">Informativa sulla privacy</h1>
+    <h1 data-it="Informativa sulla privacy" data-en="Privacy Policy" data-fr="Politique de confidentialité" data-de="Datenschutzerklärung" data-es="Política de privacidad">Privacy Policy</h1>
     <p class="sub"
        data-it="Un'app che rispetta l'ambiente. E la tua privacy."
        data-en="An app that respects the planet. And your privacy."
        data-fr="Une app qui respecte la planète. Et ta vie privée."
        data-de="Eine App, die den Planeten respektiert. Und deine Privatsphäre."
-       data-es="Una app que respeta el planeta. Y tu privacidad.">Un'app che rispetta l'ambiente. E la tua privacy.</p>
-  </div>
-
-  <div class="langbar" role="group" aria-label="Lingua / Language">
-    <button id="btn-it" aria-pressed="true" onclick="setLang('it')">Italiano</button>
-    <button id="btn-en" aria-pressed="false" onclick="setLang('en')">English</button>
-    <button id="btn-fr" aria-pressed="false" onclick="setLang('fr')">Français</button>
-    <button id="btn-de" aria-pressed="false" onclick="setLang('de')">Deutsch</button>
-    <button id="btn-es" aria-pressed="false" onclick="setLang('es')">Español</button>
+       data-es="Una app que respeta el planeta. Y tu privacidad.">An app that respects the planet. And your privacy.</p>
   </div>
 
   <!-- ===================== ITALIANO ===================== -->
-  <div class="content lang-it">
+  <div class="content lang-it" hidden>
     <p class="date">Ultimo aggiornamento: 8 luglio 2026</p>
     <p>Trashino ("l'app") è un promemoria giornaliero per la raccolta differenziata, sviluppato da <strong>Airally Digital</strong> ("noi"). Questa pagina spiega in modo semplice quali dati l'app tratta e perché. Trashino è pensata nel rispetto della privacy: <strong>nessun account</strong>, nessun login, e non raccogliamo il tuo nome, la tua email o i tuoi contatti.</p>
     <h2>Dati salvati sul tuo dispositivo</h2>
@@ -125,7 +164,7 @@
   </div>
 
   <!-- ===================== ENGLISH ===================== -->
-  <div class="content lang-en" hidden>
+  <div class="content lang-en">
     <p class="date">Last updated: 8 July 2026</p>
     <p>Trashino ("the app") is a daily waste-collection reminder developed by <strong>Airally Digital</strong> ("we", "us"). This page explains, in plain terms, what data the app handles and why. Trashino is privacy-friendly: <strong>no account</strong>, no login, and we do not collect your name, email or contacts.</p>
     <h2>Data stored on your device</h2>
@@ -256,42 +295,75 @@
     <p>Airally Digital — <a href="mailto:airally.digital@gmail.com">airally.digital@gmail.com</a></p>
   </div>
 
-  <footer>
-    <img class="wm-img" src="wordmark-on-dark.png" alt="Trashino" width="150" height="37">
-    <p class="muted" style="margin:8px 0 0;">© 2026 Airally Digital — <span
+</div><!-- /.wrap -->
+
+<footer class="trfoot">
+  <div class="in">
+    <img class="wm-img" src="wordmark-on-dark.png" alt="Trashino">
+    <div class="soc">
+      <a href="https://instagram.com/trashino.eco" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#cfe6d4" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.2" fill="#cfe6d4" stroke="none"/></svg></a>
+      <a href="https://facebook.com/trashino.eco" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+    </div>
+    <div class="fine">© 2026 <b>Airally Digital</b> · <span
        data-it="un piccolo gesto al giorno, per un mondo più pulito."
        data-en="one small act a day, for a cleaner world."
        data-fr="un petit geste par jour, pour un monde plus propre."
        data-de="eine kleine Geste am Tag, für eine sauberere Welt."
-       data-es="un pequeño gesto al día, por un mundo más limpio.">un piccolo gesto al giorno, per un mondo più pulito.</span></p>
-    <p class="ver"><span
+       data-es="un pequeño gesto al día, por un mundo más limpio.">one small act a day, for a cleaner world.</span> · <a href="https://airally-digital.github.io/trashino-site/"
+       data-it="Home" data-en="Home" data-fr="Accueil" data-de="Start" data-es="Inicio">Home</a><br><span
        data-it="Versione: 8 luglio 2026"
        data-en="Version: 8 July 2026"
        data-fr="Version : 8 juillet 2026"
        data-de="Version: 8. Juli 2026"
-       data-es="Versión: 8 de julio de 2026">Versione: 8 luglio 2026</span> · <a href="versions/"
+       data-es="Versión: 8 de julio de 2026">Version: 8 July 2026</span> · <a href="versions/"
        data-it="versioni precedenti" data-en="previous versions"
-       data-fr="versions précédentes" data-de="frühere Versionen" data-es="versiones anteriores">versioni precedenti</a></p>
-  </footer>
-
-</div>
+       data-fr="versions précédentes" data-de="frühere Versionen" data-es="versiones anteriores">previous versions</a></div>
+  </div>
+</footer>
 
 <script>
-  var LANGS = ['it','en','fr','de','es'];
+  var LANGS = ['en','it','fr','de','es'];
+  var FLAG  = {en:'🇬🇧',it:'🇮🇹',fr:'🇫🇷',de:'🇩🇪',es:'🇪🇸'};
+  var TITLE = {en:'Privacy Policy',it:'Informativa sulla privacy',fr:'Politique de confidentialité',de:'Datenschutzerklärung',es:'Política de privacidad'};
+  var DESC  = {
+    en:"Trashino's privacy policy — a waste-collection reminder. No account, offline-first.",
+    it:"Informativa sulla privacy di Trashino — promemoria della raccolta differenziata. Nessun account, offline-first.",
+    fr:"Politique de confidentialité de Trashino — rappel pour le tri des déchets. Sans compte, hors ligne d'abord.",
+    de:"Datenschutzerklärung von Trashino — Erinnerung für die Mülltrennung. Kein Konto, offline-first.",
+    es:"Política de privacidad de Trashino — recordatorio para el reciclaje. Sin cuenta, offline-first."
+  };
   function setLang(l){
-    if (LANGS.indexOf(l) < 0) l = 'it';
+    if (LANGS.indexOf(l) < 0) l = 'en';
     document.documentElement.lang = l;
     LANGS.forEach(function(x){
-      document.querySelector('.lang-' + x).hidden = (x !== l);
-      document.getElementById('btn-' + x).setAttribute('aria-pressed', x === l);
+      var block = document.querySelector('.lang-' + x); if (block) block.hidden = (x !== l);
     });
     document.querySelectorAll('[data-' + l + ']').forEach(function(el){
       el.textContent = el.getAttribute('data-' + l);
     });
+    document.querySelectorAll('.lang-btn').forEach(function(b){
+      var on = b.getAttribute('data-lang') === l;
+      b.classList.toggle('on', on); b.setAttribute('aria-current', on ? 'true' : 'false');
+    });
+    var trig = document.getElementById('langTrigger'); if (trig) trig.textContent = FLAG[l] + ' ▾';
+    document.title = 'Trashino — ' + (TITLE[l] || TITLE.en);
+    var md = document.getElementById('metaDesc'); if (md && DESC[l]) md.setAttribute('content', DESC[l]);
+    try { localStorage.setItem('trashino_lang', l); } catch(e){}
   }
-  var nav = (navigator.language || 'it').slice(0,2).toLowerCase();
-  setLang(LANGS.indexOf(nav) >= 0 ? nav : 'it');
+  function detectLang(){
+    try { var s = localStorage.getItem('trashino_lang'); if (LANGS.indexOf(s) >= 0) return s; } catch(e){}
+    var navs = navigator.languages || [navigator.language || 'en'];
+    for (var i=0;i<navs.length;i++){ var c=(navs[i]||'').slice(0,2).toLowerCase(); if (LANGS.indexOf(c) >= 0) return c; }
+    return 'en';
+  }
+  document.querySelectorAll('.lang-btn').forEach(function(b){
+    b.addEventListener('click', function(){ setLang(b.getAttribute('data-lang')); document.getElementById('langsel').classList.remove('open'); });
+  });
+  var _trig = document.getElementById('langTrigger');
+  if (_trig) _trig.addEventListener('click', function(e){ e.stopPropagation(); var s=document.getElementById('langsel'); var o=s.classList.toggle('open'); _trig.setAttribute('aria-expanded', o?'true':'false'); });
+  document.addEventListener('click', function(){ var s=document.getElementById('langsel'); if(s){ s.classList.remove('open'); if(_trig) _trig.setAttribute('aria-expanded','false'); } });
+  setLang(detectLang());
 </script>
-<noscript><style>.content{display:block !important;} .langbar{display:none;}</style></noscript>
+<noscript><style>.content{display:block !important;}</style></noscript>
 </body>
 </html>
